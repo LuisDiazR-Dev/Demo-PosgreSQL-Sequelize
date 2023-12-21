@@ -3,7 +3,7 @@ const {Sequelize} = require ('sequelize')
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME } = process.env;
 
 // * Models
-const user = require('./Models/user')
+const User = require('./Models/user')
 const subject = require('./Models/subject')
 const teacher = require('./Models/teacher')
 
@@ -23,7 +23,7 @@ const database = new Sequelize({
      
 
 // * Models executed
-user(database);
+User(database);
 subject(database);
 teacher(database);
 
